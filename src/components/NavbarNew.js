@@ -33,7 +33,7 @@ const MenuLink = styled.a`
   text-align: center;
   text-decoration: none;
   color: white;
-  overflow: auto;
+  // overflow: auto;
   transition: all 0.3s ease-in;
   font-size: 0.8rem;
   font-family: Arial;
