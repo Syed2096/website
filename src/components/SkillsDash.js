@@ -117,7 +117,7 @@ const Image = styled.div`
   width: 90px;
   height: 90px;
   position: relative;
-  border-radius: 45px;
+  border-radius: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
