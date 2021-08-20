@@ -9,6 +9,7 @@ import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import NavbarNew from './components/NavbarNew';
 // import Footer from './components/Footer';
+import CryptoBot from './pages/CryptoBot';
 
 
 function App() {
@@ -33,7 +34,10 @@ function App() {
         </Route>
         <Route path='/contact'>
           <Contact/>
-        </Route>        
+        </Route>  
+        <Route path='/cryptoBot'>
+          <CryptoBot/>
+        </Route>       
       </Router>
       {/* <Footer/> */}
     </>

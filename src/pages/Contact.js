@@ -59,7 +59,7 @@ const Background = styled.div`
     text-align: center;
     font-size: 0.7rem; 
     overflow: auto;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 `;
 
@@ -79,6 +79,7 @@ const Skill = styled.a`
     text-align: center;
     font-size: 1.2rem; 
     overflow: auto;
+    margin-top: 1rem;
   }
 `;
 
