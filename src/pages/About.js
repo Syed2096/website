@@ -59,7 +59,9 @@ const styles = {
     left: '50%',
     top: '30rem',
     transform: 'translate(-50%,-50%)',
-    borderRadius: '100rem'
+    borderRadius: '100%',
+    borderStyle: 'solid',
+    borderColor: 'white'
   },
   background: {
     'background-color': 'black',

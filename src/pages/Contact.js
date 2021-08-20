@@ -12,34 +12,25 @@ function Contact() {
             <Image>
               <Icon src={linkedin}></Icon>
             </Image>
-            <Title>linkedin</Title>
+            <Title>linkedin - Ahmed Syed</Title>
           </SkillTitle>
-          <Paragraph>
-          Ahmed Syed
-        </Paragraph>
       </Skill>
       <Skill href='https://github.com/Syed2096' target="_blank">
           <SkillTitle>
             <Image>
               <Icon src={github}></Icon>
             </Image>
-            <Title>Github</Title>
+            <Title>Github - Syed2096</Title>
           </SkillTitle>
-          <Paragraph>
-          Syed2096
-        </Paragraph>
       </Skill>
       <Skill>
           <SkillTitle>
             <Image>
               <Icon src={email}></Icon>
             </Image>
-            <Title>Email</Title>
+            <Title>Email - amdsyd2000@gmail.com</Title>
           </SkillTitle>
-          <Paragraph>
-          amdsyd2000@gmail.com
-        </Paragraph>
-      </Skill>      
+      </Skill>         
     </Background>
   );
 }
@@ -58,64 +49,52 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  grid-gap: 1rem;
-  padding: 1rem 80px;
+  padding: 1rem 10px;
   font-size: 1.2rem; 
   @media screen and (max-width: 968px) {
     display: grid;
-    // grid-template-columns: repeat(3, 1fr);
     grid-template-columns: none;
     justify-content: center;
     align-items: center;
     text-align: center;
-    grid-gap: 1rem;
-    padding: 1rem 80px;
-    font-size: 1.2rem; 
+    font-size: 0.7rem; 
     overflow: auto;
+    margin-top: 2rem;
   }
 `;
 
 
 const Skill = styled.a`
-  padding: 1rem;
   cursor: pointer;
   left: 50%;
-  margin-top: 5rem;
   background: black;
   &:hover {
     background-color: white;
     color: black;
     border-radius: 10rem;
   }
-`;
-
-const Paragraph = styled.a`
-  width: 75%;
-  color: white;
-  ${Skill}:hover & {
-    background-color: white;
-    color: black;
-    border-radius: 10rem;
+  @media screen and (max-width: 968px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem; 
+    overflow: auto;
   }
 `;
 
 const Title = styled.h3`
   color: white;
-  margin-top: 10px;
   ${Skill}:hover & {
     background-color: white;
     color: black;
-    border-radius: 10rem;
+    border-radius: 100%;
   }
 `;
 
 const SkillTitle = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  
+  align-items: center;  
 `;
 
 const Image = styled.div`
@@ -127,8 +106,15 @@ const Image = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 968px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 
 const Icon = styled.img`
   width: 60px;
+  @media screen and (max-width: 968px) {
+    width: 40px;
+  }
 `;
