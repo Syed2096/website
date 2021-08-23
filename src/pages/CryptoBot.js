@@ -87,7 +87,8 @@ function CryptoBot() {
            <Text>Search up a coin from binance, for example btc, eth, ada, etc. Some coins will not work with the bot, I've set the limit to 100 coins. Each point is 5 mins apart and the bot predicts 60 points ahead (5 hours). Also right now I'm running the backend/database on my laptop, so if too many people are on at once it won't work properly. I will upgrade the servers if needed.</Text>
           {showBest ? 
           <div style={{marginTop: '-5rem'}}>
-            <Text>This shows up if the coin your input is invalid! Here's proof this project wasn't a complete failure.</Text>
+            <Text>This shows up if the coin your input is invalid or the bot is down! Here's proof this project wasn't a complete failure.</Text>
+            <Link href='https://discord.com/invite/JMmQzRQrGf'>Click here to join the discord where the bot actually works!</Link>
             <Image src={picture} alt="temp"/>
           </div> : 
           <>
@@ -149,4 +150,9 @@ const Image = styled.img`
   @media screen and (max-width: 968px) {
     width: 100%
   }
+`;
+
+const Link = styled.a`
+  display: flex;
+  justify-content: center;
 `;
