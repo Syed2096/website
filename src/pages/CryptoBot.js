@@ -88,7 +88,6 @@ function CryptoBot() {
           {showBest ? 
           <div style={{marginTop: '-5rem'}}>
             <Text>This shows up if the coin your input is invalid or the bot is down! Here's proof this project wasn't a complete failure.</Text>
-            <Link href='https://discord.com/invite/JMmQzRQrGf'>Click here to join the discord where the bot actually works!</Link>
             <Image src={picture} alt="temp"/>
           </div> : 
           <>
