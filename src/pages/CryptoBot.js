@@ -38,7 +38,7 @@ function CryptoBot() {
   }
 
   async function getImage1(coinName) {
-    await fetch('https://53cd-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image1', {
+    await fetch('https://a595-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image1', {
       method: 'POST',
       body: JSON.stringify({ coin : coinName})
     }).then(validateResponse)
@@ -49,7 +49,7 @@ function CryptoBot() {
   }
 
   async function getImage2(coinName) {
-    await fetch('https://53cd-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image2', {
+    await fetch('https://a595-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image2', {
       method: 'POST',
       body: JSON.stringify({ coin : coinName})
     }).then(validateResponse)
