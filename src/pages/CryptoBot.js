@@ -150,8 +150,3 @@ const Image = styled.img`
     width: 100%
   }
 `;
-
-const Link = styled.a`
-  display: flex;
-  justify-content: center;
-`;
