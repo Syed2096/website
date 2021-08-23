@@ -1,22 +1,69 @@
 // import React, { useEffect, useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import best from '../components/images/best.png';
-
-// function validateResponse(response) {
-//   if (!response.ok) {
-//       throw Error(response.statusText);
-//   }
-//   return response;
-// }
+import { Input, Button, Row, Col } from 'antd';
 
 function CryptoBot() {
-  // const [picture, setPicture] = useState(best);
+  const picture = best;
+  const [coin, setCoin] = useState();
+  const [showBest, setShowBest] = useState(true);
+  const [leftPicture, setLeftPicture] = useState();
+  const [rightPicture, setRightPicture] = useState();
+
+  function validateResponse(response) {
+    if (!response.ok) {
+      setShowBest(true);
+    } else {
+      setShowBest(false);
+    }
+    return response;
+  }
+
+  function getData(val) {
+    // console.log(val.target.value);
+    setCoin(val.target.value);
+  }
+
+  async function update() {
+    // Try updating if not keep best
+    try {
+      await getImage1(coin);
+      await getImage2(coin);
+
+    } catch (err) {
+      setShowBest(true);
+      console.log(err);
+    }
+  }
+
+  async function getImage1(coinName) {
+    await fetch('https://53cd-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image1', {
+      method: 'POST',
+      body: JSON.stringify({ coin : coinName})
+    }).then(validateResponse)
+    .then(response => response.blob())
+    .then(blob => {
+      setLeftPicture(URL.createObjectURL(blob));
+    }) 
+  }
+
+  async function getImage2(coinName) {
+    await fetch('https://53cd-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image2', {
+      method: 'POST',
+      body: JSON.stringify({ coin : coinName})
+    }).then(validateResponse)
+    .then(response => response.blob())
+    .then(blob => {
+      setRightPicture(URL.createObjectURL(blob));
+    }) 
+  }
+
   // useEffect(() => {
   //   let coinName = 'btc';
   //   async function fetchData(coinName) {
   //     try {
-  //       fetch(`https://6653e09e6331.ngrok.io/api/test`, coinName)
+  //       fetch(`https://6653e09e6331.ngrok.io/test`, coinName)
   //         .then(validateResponse)
   //         .then(response => response.blob())
   //         .then(blob => {
@@ -31,13 +78,38 @@ function CryptoBot() {
 
   return (
     <Background>
-            <Text>
+            {/* <Text>
               When i can i will be getting the bot to work with this website, for now heres the best predicted image i have from the bot.
               The bot predicts ahead a certain period of time, in this case it was 60 points ahead each point being 5 mins. This means the bot was
               able to predict to a certain degree this crypto, 5 hours ahead of time. However, trust me the bot is not this good all the time. 
             </Text>
-           <Image src={best} alt='best'></Image>
-           {/* <h2 style={{color: "white"}}>OKay</h2> */}
+           <Image src={best} alt='best'></Image> */}
+           <Text>Search up a coin from binance, for example btc, eth, ada, etc. Some coins will not work with the bot, I've set the limit to 100 coins. Each point is 5 mins apart and the bot predicts 60 points ahead (5 hours). Also right now I'm running the backend/database on my laptop, so if too many people are on at once it won't work properly. I will upgrade the servers if needed.</Text>
+          {showBest ? 
+          <div style={{marginTop: '-5rem'}}>
+            <Text>This shows up if the coin your input is invalid! Here's proof this project wasn't a complete failure.</Text>
+            <Image src={picture} alt="temp"/>
+          </div> : 
+          <>
+            <Row style={{display: 'flex', justifyContent: "center", alignItems: "center"}}>
+              <Col>
+                <Image src={leftPicture} alt="temp"/>
+              </Col>
+              <Col>
+                <Image src={rightPicture} alt="temp"/>
+              </Col>
+            </Row>
+          </>
+          }
+          <Row style={{display: 'flex', justifyContent: "center", alignItems: "center"}}>
+            <Col style={{padding: '10px'}}>
+              <Input onChange={getData} style={{width: '100%'}} placeholder='Search up a coin!'></Input>
+            </Col>
+            <Col>
+              <Button onClick={update}>Click Me!</Button>
+            </Col>           
+          </Row>
+           
     </Background>
   );
 }
@@ -54,6 +126,9 @@ const Background = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 968px) {
+      overflow-x: hidden;
+    }
 `;
 
 const Text = styled.p`
@@ -63,12 +138,14 @@ const Text = styled.p`
   transform: translate(-50%);
   margin-top: 5rem;
   text-align: center;
+  @media screen and (max-width: 968px) {
+    width: 70%
+  }
 `;
 
 const Image = styled.img`
   margin-left: 50%;
   transform: translate(-50%);
-  width: 50%;
   @media screen and (max-width: 968px) {
     width: 100%
   }
