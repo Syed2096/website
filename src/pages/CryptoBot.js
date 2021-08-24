@@ -38,7 +38,7 @@ function CryptoBot() {
   }
 
   async function getImage1(coinName) {
-    await fetch('https://a595-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image1', {
+    await fetch('https://9eb9-2607-fea8-d20-873a-d175-7e28-3276-7c3a.ngrok.io/image1', {
       method: 'POST',
       body: JSON.stringify({ coin : coinName})
     }).then(validateResponse)
@@ -49,7 +49,7 @@ function CryptoBot() {
   }
 
   async function getImage2(coinName) {
-    await fetch('https://a595-2607-fea8-d20-873a-5d8e-e6c1-98dc-7b30.ngrok.io/image2', {
+    await fetch('https://9eb9-2607-fea8-d20-873a-d175-7e28-3276-7c3a.ngrok.io/image2', {
       method: 'POST',
       body: JSON.stringify({ coin : coinName})
     }).then(validateResponse)
@@ -84,7 +84,7 @@ function CryptoBot() {
               able to predict to a certain degree this crypto, 5 hours ahead of time. However, trust me the bot is not this good all the time. 
             </Text>
            <Image src={best} alt='best'></Image> */}
-           <Text>Search up a coin from binance, for example btc, eth, ada, etc. Some coins will not work with the bot, I've set the limit to 100 coins. Each point is 5 mins apart and the bot predicts 60 points ahead (5 hours). Also right now I'm running the backend/database on my laptop, so if too many people are on at once it won't work properly. I will upgrade the servers if needed.</Text>
+           <Text>Search up a coin from binance, for example btc, eth, ada, etc. Some coins will not work with the bot, I've set the limit to 100 coins. Each point is 5 mins apart and the bot predicts 60 points ahead (5 hours). Also right now I'm running the backend/database on my laptop, so if too many people are on at once it won't work properly. You may have to click the button again for a proper result. If the bot isn't down it will give u a proper result eventually.</Text>
           {showBest ? 
           <div style={{marginTop: '-5rem'}}>
             <Text>This shows up if the coin your input is invalid or the bot is down! Here's proof this project wasn't a complete failure.</Text>
