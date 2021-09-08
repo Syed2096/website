@@ -38,7 +38,7 @@ function CryptoBot() {
   }
 
   async function getImage1(coinName) {
-    await fetch('https://ebfa-2607-fea8-d20-873a-11d4-4779-1a0d-114e.ngrok.io/image1', {
+    await fetch('https://ebfa-2607-fea8-d20-873a-11d4-4779-1a0f-114e.ngrok.io/image1', {
       method: 'POST',
       body: JSON.stringify({ coin : coinName})
     }).then(validateResponse)
@@ -49,7 +49,7 @@ function CryptoBot() {
   }
 
   async function getImage2(coinName) {
-    await fetch('https://ebfa-2607-fea8-d20-873a-11d4-4779-1a0d-114e.ngrok.io/image2', {
+    await fetch('https://ebfa-2607-fea8-d20-873a-11d4-4779-1a0f-114e.ngrok.io/image2', {
       method: 'POST',
       body: JSON.stringify({ coin : coinName})
     }).then(validateResponse)
