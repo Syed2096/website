@@ -1,5 +1,5 @@
 import React from "react";
-import photo from './images/navbarBackground.jpg'
+import photo from './images/1578609255371.jpg'
 import Typical from 'react-typical';
 import styled from "styled-components";
 
