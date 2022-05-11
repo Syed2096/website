@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import photo from '../components/images/andie.png'
+import andie from '../components/images/andie.png'
+import sunlife from '../components/images/sunlifeLogo.png'
 
 function Experience() {
   return (
@@ -8,12 +9,12 @@ function Experience() {
       <Skill>
           <SkillTitle>
             <Image>
-              <Icon src={photo}></Icon>
+              <Icon src={andie}></Icon>
             </Image>
             <h3 style={{color: 'white', marginTop: '10px'}}>SmoothAI Inc/Andie</h3>
           </SkillTitle>
           <Paragraph>
-          Andie is a digital customer service tool that help businesses serve customers more efficiently and effectively. My position at the company was a full stack developer.
+          Andie is a digital customer service tool that help businesses serve customers more efficiently and effectively. My position at the company was a Full Stack Software Developer.
           I worked with several web development technologies.   
         </Paragraph>
         <Paragraph>
@@ -25,8 +26,32 @@ function Experience() {
           if not most basically everything. Luckily, I was able to learn what I wanted, complete my tasks and understand the company as a whole.
         </Paragraph>
         <Paragraph>
-          My job as a Full Stack developer required me to learn about different front end and backend technologies, and how to communicate between the two. The most interesting part of my job
+          My job as a Full Stack Software Developer required me to learn about different front end and backend technologies, and how to communicate between the two. The most interesting part of my job
           was creating text features. These features connected with the backend in order to allow users to accomplish tasks from text.
+        </Paragraph>
+      </Skill>
+      <Skill style={{marginTop: '-20px'}}>
+          <SkillTitle>
+            <Image>
+              <Icon src={sunlife}></Icon>
+            </Image>
+            <h3 style={{color: 'white', marginTop: '10px'}}>Sun Life Financial</h3>
+          </SkillTitle>
+          <Paragraph>
+          Sun Life Financial Inc. is a Canadian financial services company; it is primarily known as a life insurance company. I worked as a Big Data Software Developer working with many
+          technologies/tools to create scripts, documentation and pipelines.
+        </Paragraph>
+        <Paragraph>
+          My goal for this term wasn't anything too specific, I just wanted to expose myself to new tools and technologies. I didn't quite know what to expect from this role, in the end it 
+          turned out to be a great learning opportunity. I was exposed to large company procedures when dealing with development on a large scale, an example being standard gitflow. I had 
+          the opportunity to work with two seperate teams to create CI/CD pipelines using Jenkins, CDD, Ansible, artifrog, aws, etc. I was exposed to Docker, Docusaurus, Groovy, Adaptavist 
+          scripting, etc by using these tools/technologies to automate and accomplish tasks to increase productivity. This term also exposed me to thourough documentation, projects I created
+          and projects I didn't. This helped enhance my problem solving and investigative skills, alongside other software development skills. I was fortunate enough to work alongside another
+          coop student from the University of Guelph, this allowed us to help one another when needed and also allowed us to cooperate on tasks at times.
+        </Paragraph>
+        <Paragraph>
+          This term taught me a lot and exposed me to a variety of new tools/technologies, I liked cooperating with another coop student while working. One of the more useful tools I learned 
+          about on this job was Docker, it allows the user to create containers of various softwares like an entirely different OS.
         </Paragraph>
       </Skill>
     </Background>
