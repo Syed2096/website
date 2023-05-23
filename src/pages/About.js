@@ -114,7 +114,6 @@ const Image = styled.img`
   left: 50%;
   position: absolute;
   border-radius: 100%;
-  background-color: white;
   height: 20vh;
   width: 20vh;
   transform: translate(-50%)
