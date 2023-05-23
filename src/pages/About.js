@@ -96,7 +96,7 @@ const Background = styled.div`
   position: absolute;
   overflow: auto;
   width: 100%;
-  height: 110%;
+  height: 100%;
   opacity: 85%;
 `;
 
