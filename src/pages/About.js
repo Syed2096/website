@@ -25,9 +25,9 @@ function About() {
 
   return (
     <Background>
-      <div style={{...styles.card}}>
-        <h1 style={{...styles.main}} >About Me</h1>
-        <Paragraph>
+    <div style={styles.card}>
+      <h1 style={styles.main}>About Me</h1>
+      <Paragraph>
         Hello, my name is Ahmed! I'm a passionate software engineer with a deep-rooted love for solving complex problems 
         and crafting innovative solutions. As a computer science graduate, I've honed my skills in various topics from data structures and algorithms 
         to compilers. What sets me apart is my unwavering curiosity and eagerness to learn, which drive me to stay 
@@ -35,16 +35,23 @@ function About() {
         and communication skills foster creativity and seamless cooperation. My portfolio showcases a range of projects where I've 
         leveraged agile methodologies and my attention to detail to deliver exceptional results. I invite you to ask me questions 
         to delve deeper into my experiences and discover how I can contribute to your team!
-        </Paragraph>
-        <Image src={logo}/>
+      </Paragraph>
+      <Paragraph>
+        <Image src={logo} />
+      </Paragraph>
+      <Paragraph>
         <Header>Notable Courses</Header>
-        <ul style={{...styles.courses, marginTop: "9rem"}}>
+      </Paragraph>
+      <Paragraph>
+        <Ul>
           {courses.map((course, index) => (
             <li key={index}>{course}</li>
           ))}
-        </ul>
-      </div>
-    </Background>
+        </Ul>
+      </Paragraph>
+    </div>
+  </Background>
+  
   );
 }
 
@@ -66,7 +73,6 @@ const styles = {
     position: 'absolute',
     listStyleType: 'none',
     left: '50%',
-    top: '38rem',
     transform: 'translate(-50%,-50%)',
     fontFamily: 'Arial',
     zIndex: -1,
@@ -106,7 +112,6 @@ const Header = styled.h1`
 
 const Image = styled.img`
   left: 50%;
-  top: 15rem;
   position: absolute;
   border-radius: 100%;
   background-color: white;
@@ -123,3 +128,14 @@ const Paragraph = styled.p`
   text-align: center;
   transform: translate(-50%)
 `;
+
+const Ul = styled.ul`
+  color: white;
+  width: 75%;
+  margin-left: 50%;
+  margin-top: -6rem;
+  text-align: center;
+  transform: translate(-50%);
+  list-style-type: none;
+`;
+
