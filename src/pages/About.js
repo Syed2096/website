@@ -37,8 +37,8 @@ function About() {
         to delve deeper into my experiences and discover how I can contribute to your team!
         </p>
         <img style={{...styles.logo}} src={logo} alt='Temp' width='200vw' height='200vh'/>
-        <h1 style={{...styles.paragraph, marginTop: "25rem"}} >Notable Courses</h1>
-        <ul style={{...styles.courses, marginTop: "15rem"}}>
+        <h1 style={{...styles.paragraph, marginTop: "23rem"}} >Notable Courses</h1>
+        <ul style={{...styles.courses, marginTop: "9rem"}}>
           {courses.map((course, index) => (
             <li key={index}>{course}</li>
           ))}
@@ -65,12 +65,12 @@ const styles = {
     color: 'white',
     position: 'absolute',
     marginLeft: '50%',
-    top: '15rem',
+    top: '10rem',
     transform: 'translate(-50%,-50%)',
     fontFamily: 'Arial',
     zIndex: -1,
     // height: '100%'
-    width: '75%',
+    width: '60%',
     'text-align': 'center'
   },
   courses: {
@@ -87,7 +87,7 @@ const styles = {
     'text-align': 'center'
   },
   card: {
-    marginTop: '10vh',
+    marginTop: '5rem',
     height: '90vh',
     width: '100%',
     // background: '',
@@ -98,8 +98,8 @@ const styles = {
   logo: {
     position: 'absolute',
     left: '50%',
-    top: '30rem',
-    transform: 'translate(-50%,-50%)',
+    top: '15rem',
+    transform: 'translate(-50%,0%)',
     borderRadius: '100%',
     borderStyle: 'solid',
     borderColor: 'white'
