@@ -64,7 +64,7 @@ const Icon = styled.img`
   border: 2px solid white;
   display: block;
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-top: 13rem;
   width: 200px;
   height: 200px;
   @media screen and (max-width: 768px) {
