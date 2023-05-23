@@ -76,13 +76,15 @@ const styles = {
   courses: {
     color: 'white',
     position: 'absolute',
-    left: '55rem',
+    listStyleType: 'none',
+    left: '50%',
     top: '38rem',
     transform: 'translate(-50%,-50%)',
     fontFamily: 'Arial',
     zIndex: -1,
     // height: '100%'
     width: '40rem',
+    'text-align': 'center'
   },
   card: {
     marginTop: '10vh',
