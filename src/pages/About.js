@@ -58,7 +58,6 @@ const styles = {
     left: '50%',
     top: '4rem',
     transform: 'translate(-50%,-50%)',
-    'font-family': 'Arial',
     fontFamily: 'Arial',
     zIndex: -1
   },
@@ -68,7 +67,6 @@ const styles = {
     left: '50%',
     top: '15rem',
     transform: 'translate(-50%,-50%)',
-    'font-family': 'Arial',
     fontFamily: 'Arial',
     zIndex: -1,
     // height: '100%'
@@ -81,7 +79,6 @@ const styles = {
     left: '55rem',
     top: '38rem',
     transform: 'translate(-50%,-50%)',
-    'font-family': 'Arial',
     fontFamily: 'Arial',
     zIndex: -1,
     // height: '100%'
