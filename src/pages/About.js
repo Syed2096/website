@@ -64,13 +64,13 @@ const styles = {
   paragraph: {
     color: 'white',
     position: 'absolute',
-    left: '50%',
+    marginLeft: '50%',
     top: '15rem',
     transform: 'translate(-50%,-50%)',
     fontFamily: 'Arial',
     zIndex: -1,
     // height: '100%'
-    width: '40rem',
+    width: '75%',
     'text-align': 'center'
   },
   courses: {
