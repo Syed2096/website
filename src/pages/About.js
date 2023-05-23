@@ -27,6 +27,8 @@ function About() {
     <Background>
       <div style={{...styles.card}}>
         <h1 style={{...styles.main}} >About Me</h1>
+      </div>
+      <div style={{...styles.card}}>
         <p style={{...styles.paragraph}}>
         Hello, my name is Ahmed! I'm a passionate software engineer with a deep-rooted love for solving complex problems 
         and crafting innovative solutions. As a computer science graduate, I've honed my skills in various topics from data structures and algorithms 
@@ -36,14 +38,17 @@ function About() {
         leveraged agile methodologies and my attention to detail to deliver exceptional results. I invite you to ask me questions 
         to delve deeper into my experiences and discover how I can contribute to your team!
         </p>
+      </div>
+      <div>
         <img style={{...styles.logo}} src={logo} alt='Temp' width='200vw' height='200vh'/>
+      </div>
         <h1 style={{...styles.paragraph, marginTop: "23rem"}} >Notable Courses</h1>
         <ul style={{...styles.courses, marginTop: "9rem"}}>
           {courses.map((course, index) => (
             <li key={index}>{course}</li>
           ))}
         </ul>
-      </div>
+      
     </Background>
   );
 }
