@@ -44,7 +44,6 @@ function DashboardNew() {
   color: white;
   text-align: center;
   font-family: Arial;
-  margin-top: 5rem;
   @media screen and (max-width: 768px) {
     margin-top: 5rem;
   }
@@ -64,11 +63,10 @@ const Icon = styled.img`
   border: 2px solid white;
   display: block;
   margin: 0 auto;
-  margin-top: 10rem;
   width: 200px;
   height: 200px;
   @media screen and (max-width: 768px) {
-    margin-top: 3rem;
+    margin-top: 10rem;
     width: 150px;
     height: 150px;
   }
