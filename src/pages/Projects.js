@@ -5,12 +5,18 @@ function Projects() {
   return (
     <Background>
       <Container>
-      <Skill2 href="/cryptoBot">
+      {/* <Skill2 href="/cryptoBot">
           <SkillTitle>
-            <Bot>CryptoBot <h6 style={{color: "white"}}>Click Me!</h6></Bot>
+            <Bot>CryptoBot</Bot>
           </SkillTitle>
           <p>This was a python project that predicted the price of cryptocurrencies using machine learning and neural networks, libraries such as tensorflow, matplotlib and discord were used.</p>
-        </Skill2>
+        </Skill2> */}
+        <Skill>
+          <SkillTitle>
+            <Bot>Trading AI</Bot>
+          </SkillTitle>
+          <p>Using python, tensorflow and other libraries I created a discord bot that would trade stocks/crypto automatically.</p>
+        </Skill>
         <Skill>
           <SkillTitle>
             <h3 style={{color: 'white'}}>Dungeons and Dragons Generator</h3>

@@ -18,7 +18,7 @@ function NavbarNew() {
         <MenuLink href="/about">About</MenuLink>
         <MenuLink href="/skills">Skills</MenuLink>
         <MenuLink href="/experience">Experience</MenuLink>
-        <MenuLink href="/projects">Projects</MenuLink>
+        {/* <MenuLink href="/projects">Projects</MenuLink> */}
         <MenuLink href="/contact">Contact</MenuLink>
       </Menu>
     </Nav>
