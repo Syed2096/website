@@ -88,7 +88,7 @@ const styles = {
   },
   card: {
     marginTop: '5rem',
-    height: '90vh',
+    height: '90%',
     width: '100%',
     // background: '',
     position: 'absolute',
@@ -109,7 +109,7 @@ const styles = {
     position: 'fixed',
     color: 'white',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     opacity: '85%',
     zIndex: -2,
   },
