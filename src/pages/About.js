@@ -105,7 +105,7 @@ const Header = styled.h1`
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  margin-top: 20rem;
+  margin-top: 25rem;
   color: white;
   font-family: arial;
 `;
